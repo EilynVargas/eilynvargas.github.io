@@ -1,0 +1,310 @@
+:root{
+  --home-bg-width: 10000px;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --container-color: #6c6c6c;
+}
+
+*{
+  scroll-behavior: smooth;
+  scrollbar-color: lightgray transparent;
+  scrollbar-width: thin;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Boska', serif;
+  font-weight: 400;
+}
+
+h1{
+  color: var(--color-white);
+  font-size: clamp(2rem, 4vw, 10rem);
+  text-align: center;
+}
+
+h2, .--header-2{
+  font-size: clamp(2rem, 4vw, 8rem);
+  margin-bottom: 20px;
+}
+
+.--header-3{
+  font-size: clamp(1.5rem, 2.5vw, 7rem);
+}
+
+p, a{
+  font-family: 'General sans', sans-serif;
+}
+
+a{
+  text-decoration: nonee;
+  color: var(--a-text-color);
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+  grid-gap: 30px;
+}
+
+.position-absolute{
+  position: absolute;
+}
+
+.position-relative{
+  position: relative;
+}
+
+.bg-grey{
+  background-color: #f4f3f1;
+}
+
+.br-5{
+  border-radius: 5px;
+}
+
+span{
+  font-weight: 600;
+}
+
+.header-wrapper{
+  color: var(--color-white);
+}
+
+.header-logo{
+  position: absolute;
+  padding: 10px 40px;
+}
+
+.links a{
+  position: relative;
+  --underline-color: var(--color-white);
+}
+
+a::after{
+  content: "";
+  background-color: var(--underline-color);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform .3s ease;
+}
+
+ a:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar{
+  justify-content: flex-end;
+}
+
+nav{
+  position: absolute;
+  width: 20vw;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.home{
+  height: 100vh;
+  background: linear-gradient(90deg, hsla(1, 61%, 72%, 1) 0%, hsla(8, 28%, 57%, 1) 6%, hsla(17, 16%, 47%, 1) 14%, hsla(138, 5%, 43%, 1) 22%, hsla(177, 10%, 42%, 1) 33%, hsla(169, 15%, 41%, 1) 40%, hsla(99, 7%, 48%, 1) 48%, hsla(71, 12%, 45%, 1) 55%, hsla(56, 21%, 41%, 1) 61%, hsla(30, 21%, 46%, 1) 72%, hsla(7, 37%, 49%, 1) 81%, hsla(5, 37%, 55%, 1) 91%, hsla(1, 61%, 72%, 1) 100%);
+  background-size: var(--home-bg-width) 100%;
+  animation: gradient 15s linear infinite;
+}
+
+.home::after{
+  content: "";
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  background-image: url(https://arc.net/noise-light.png);
+  mix-blend-mode: screen;
+  pointer-events: none; 
+}
+
+.welcome-section{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-white);
+}
+
+.line{
+  width: 400px;
+  height: 1px;
+  background-color: var(--color-white);
+}
+
+.welcome-section p{
+  text-align: center;
+}
+
+section{
+ margin: 40px 40px 100px 40px;
+}
+
+.about{
+  align-items: center;
+
+}
+
+.about-photo{
+  width: 700px;
+  height: 1000px;
+  object-fit: cover;
+}
+
+.container p{
+  width: 100%;
+  color: var(--container-color);
+}
+
+.about-description{
+  padding: 0 100px;
+  white-space: break-spaces;
+}
+
+.resume-link a, svg{
+  --underline-color: var(--color-black);
+  transition: transform 0.2s ease
+}
+
+.resume-link:hover{
+  color: var(--color-black);
+}
+
+.resume-link:hover svg{
+  transform: translateX(5px);
+}
+
+.projects{
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+
+.card{
+  margin: auto;
+  width: 100%;
+  height: 60vh;
+}
+
+.project-img{
+  object-fit: cover;
+  max-width: 80%;
+  height: 50%;
+  transition: all .5s ease-out;
+  box-shadow: 0px 10px 30px #d7d6d6;
+}
+
+.picture-two{
+  width: 60%;
+  height: 50%;
+  margin: 100px auto;
+  background-color: pink;
+  transition: all .5s ease-out;
+}
+
+.picture-two:hover, .project-img:hover{
+  translate: 0 -8%;
+  box-shadow: 0px 30px 30px #d7d6d6;
+}
+
+footer{
+  position: relative;
+  text-align: center;
+  color: white;
+  background: linear-gradient(90deg, hsla(18, 27%, 46%, 1) 0%, hsla(26, 34%, 53%, 1) 24%, hsla(30, 34%, 70%, 1) 67%, hsla(39, 86%, 86%, 1) 95%);
+  
+}
+
+footer::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-image: url(https://arc.net/noise-light.png);
+  mix-blend-mode: screen;
+  pointer-events: none; 
+}
+
+.footer-info{
+    width: 100%;
+    border: 1px solid var(--color-white);
+    border-left: none;
+    border-right: none;
+    padding: 50px 0;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    align-items: center;
+}
+
+.footer-info > svg{ margin: 0 auto; }
+
+.header-logo, .footer-title{
+  font-family: 'Pencerio', cursive;
+
+}
+
+.footer-profiles{
+  grid-template-columns: repeat(3, minmax(0, 20px));
+}
+
+.footer-mail, .footer-description{
+  font-size: 12px;
+}
+
+.footer-description{
+  padding: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+
+}
+
+@media only screen and (max-width: 1201px) {
+
+
+}
+
+@keyframes gradient{
+  0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: var(--home-bg-width);
+	}
+}
+
