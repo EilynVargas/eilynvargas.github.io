@@ -87,9 +87,23 @@ span{
   padding: 10px 40px;
 }
 
+svg #logo-text{
+  fill: transparent;
+  stroke: white;
+  stroke-width: 1;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: fillSvg 4s ease-in-out 1 forwards;
+}
+
 .links a{
   position: relative;
   --underline-color: var(--color-white);
+}
+
+h1 > svg{
+  position: relative;
+  top: 15px;
 }
 
 a::after{
@@ -156,7 +170,7 @@ nav{
   text-align: center;
 }
 
-section{
+section:not(:first-child){
  margin: 40px 40px 100px 40px;
 }
 
@@ -295,12 +309,12 @@ footer::after{
 
 }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
 
 
 }
 
-@media only screen and (max-width: 1201px) {
+@media only screen and (max-width: 1301px) {
 
 
 }
@@ -312,5 +326,18 @@ footer::after{
 	100% {
 		background-position-x: var(--home-bg-width);
 	}
+}
+
+@keyframes fillSvg{
+  0%{
+    stroke-dashoffset: 500;
+  }
+  80%{
+    fill: transparent;
+  }
+  100%{
+    stroke-dashoffset: 0;
+    fill: white;
+  }
 }
 
