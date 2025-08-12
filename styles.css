@@ -40,6 +40,10 @@ h2, .--header-2{
   font-size: clamp(1.5rem, 2.5vw, 7rem);
 }
 
+.--body-2{
+  font-size: 12px;
+}
+
 p, a{
   font-family: 'General sans', sans-serif;
 }
@@ -221,23 +225,15 @@ section:not(:first-child){
   display: grid;
   place-items: center; 
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 
 .project-img{
   object-fit: cover;
-  max-width: 1000px;
-  height: 50%;
+  max-width: 80%;
   transition: all .5s ease-out;
   box-shadow: 0px 10px 30px #d7d6d6;
-}
-
-.picture-two{
-  width: 60%;
-  height: 50%;
-  margin: 100px auto;
-  background-color: pink;
-  transition: all .5s ease-out;
+  margin: 0 50px;
 }
 
 .picture-two:hover, .project-img:hover{
@@ -245,12 +241,29 @@ section:not(:first-child){
   box-shadow: 0px 30px 30px #d7d6d6;
 }
 
+.card-info{
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.card-text{
+  flex-shrink: 0;
+}
+
+.card-text:hover{
+    font-weight: 500;
+}
+
+.card-info:hover svg{
+  transform: translate(3px, -3px);
+}
+
 footer{
   position: relative;
   text-align: center;
   color: white;
   background: linear-gradient(90deg, hsla(18, 27%, 46%, 1) 0%, hsla(26, 34%, 53%, 1) 24%, hsla(30, 34%, 70%, 1) 67%, hsla(39, 86%, 86%, 1) 95%);
-  
 }
 
 footer::after{
@@ -310,7 +323,10 @@ footer::after{
 }
 
 @media (min-width: 1025px) and (max-width: 1300px) {
-
+  
+  .projects{
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
 
 }
 
