@@ -84,16 +84,33 @@ span{
 
 .header-wrapper{
   color: var(--color-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: all .3s ease-in-out;
 }
 
 .header-logo{
-  position: absolute;
-  padding: 10px 40px;
+  padding: 20px 40px;
 }
 
-svg #logo-text{
+.header-wrapper.scrolled {
+  background-color: var(--color-white);
+  transition: all .3s ease-in-out;
+  z-index: 1000;
+  color: var(--color-black);
+  stroke: var(--color-black);
+  fill: var(--color-black);
+  border-bottom: 1px solid #6c6c6c81;
+}
+
+svg #hero-text{
   fill: transparent;
-  stroke: white;
+  stroke: var(--color-white);
   stroke-width: 1;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
@@ -133,10 +150,8 @@ a::after{
 }
 
 nav{
-  position: absolute;
   width: 20vw;
   justify-content: space-evenly;
-  margin: 20px 0;
 }
 
 .home{
