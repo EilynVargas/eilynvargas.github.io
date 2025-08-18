@@ -1,8 +1,9 @@
 :root{
   --home-bg-width: 10000px;
-  --color-white: #ffffff;
-  --color-black: #000000;
-  --container-color: #6c6c6c;
+  --color-primary-white: #ffffff;
+  --color-primary-black: #000000;
+  --color-secondary-gray-01: #6c6c6c;
+  --color-secondary-gray-02: #c5c5c5;
 }
 
 *{
@@ -26,7 +27,7 @@ h1, h2, h3, h4{
 }
 
 h1{
-  color: var(--color-white);
+  color: var(--color-primary-white);
   font-size: clamp(2rem, 4vw, 10rem);
   text-align: center;
 }
@@ -50,7 +51,6 @@ p, a{
 
 a{
   text-decoration: none;
-  color: var(--a-text-color);
 }
 
 .flex{
@@ -83,7 +83,7 @@ span{
 }
 
 .header-wrapper{
-  color: var(--color-white);
+  color: var(--color-primary-white);
   position: fixed;
   top: 0;
   left: 0;
@@ -99,18 +99,22 @@ span{
 }
 
 .header-wrapper.scrolled {
-  background-color: var(--color-white);
+  background-color: var(--color-primary-white);
   transition: all .3s ease-in-out;
   z-index: 1000;
-  color: var(--color-black);
-  stroke: var(--color-black);
-  fill: var(--color-black);
-  border-bottom: 1px solid #6c6c6c81;
+  stroke: var(--color-primary-black);
+  fill: var(--color-primary-black);
+  border-bottom: 1px solid var(--color-secondary-gray-02);
+}
+
+.header-wrapper.scrolled .nav-link{
+  color: var(--color-primary-black);
+  --underline-color: var(--color-primary-black);
 }
 
 svg #hero-text{
   fill: transparent;
-  stroke: var(--color-white);
+  stroke: var(--color-primary-white);
   stroke-width: 1;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
@@ -119,12 +123,7 @@ svg #hero-text{
 
 .links a{
   position: relative;
-  --underline-color: var(--color-white);
-}
-
-h1 > svg{
-  position: relative;
-  top: 15px;
+  --underline-color: var(--color-primary-white);
 }
 
 a::after{
@@ -154,6 +153,15 @@ nav{
   justify-content: space-evenly;
 }
 
+.nav-link{
+  color: var(--color-primary-white);
+}
+
+h1 > svg{
+  position: relative;
+  top: 15px;
+}
+
 .home{
   height: 100vh;
   background: linear-gradient(90deg, hsla(1, 61%, 72%, 1) 0%, hsla(8, 28%, 57%, 1) 6%, hsla(17, 16%, 47%, 1) 14%, hsla(138, 5%, 43%, 1) 22%, hsla(177, 10%, 42%, 1) 33%, hsla(169, 15%, 41%, 1) 40%, hsla(99, 7%, 48%, 1) 48%, hsla(71, 12%, 45%, 1) 55%, hsla(56, 21%, 41%, 1) 61%, hsla(30, 21%, 46%, 1) 72%, hsla(7, 37%, 49%, 1) 81%, hsla(5, 37%, 55%, 1) 91%, hsla(1, 61%, 72%, 1) 100%);
@@ -176,13 +184,13 @@ nav{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--color-white);
+  color: var(--color-primary-white);
 }
 
 .line{
   width: 400px;
   height: 1px;
-  background-color: var(--color-white);
+  background-color: var(--color-primary-white);
 }
 
 .welcome-section p{
@@ -195,7 +203,6 @@ section:not(:first-child){
 
 .about{
   align-items: center;
-
 }
 
 .about-photo{
@@ -206,7 +213,7 @@ section:not(:first-child){
 
 .container p{
   width: 100%;
-  color: var(--container-color);
+  color: var(--color-secondary-gray-01);
 }
 
 .about-description{
@@ -215,12 +222,13 @@ section:not(:first-child){
 }
 
 .resume-link a, svg{
-  --underline-color: var(--color-black);
+  color: var(--color-secondary-gray-01);
+  --underline-color: var(--color-primary-black);
   transition: transform 0.2s ease
 }
 
-.resume-link:hover{
-  color: var(--color-black);
+.resume-link a:hover{
+  color: var(--color-primary-black);
 }
 
 .resume-link:hover svg{
@@ -251,7 +259,7 @@ section:not(:first-child){
   margin: 0 50px;
 }
 
-.picture-two:hover, .project-img:hover{
+.project-img:hover{
   translate: 0 -8%;
   box-shadow: 0px 30px 30px #d7d6d6;
 }
@@ -262,12 +270,16 @@ section:not(:first-child){
   justify-content: space-between;
 }
 
+.card-info > a{
+  color: var(--color-primary-black);
+}
+
 .card-text{
   flex-shrink: 0;
 }
 
 .card-text:hover{
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .card-info:hover svg{
@@ -295,7 +307,7 @@ footer::after{
 
 .footer-info{
     width: 100%;
-    border: 1px solid var(--color-white);
+    border: 1px solid var(--color-primary-white);
     border-left: none;
     border-right: none;
     padding: 50px 0;
