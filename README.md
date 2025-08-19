@@ -1,5 +1,6 @@
 # Portfolio
-This is my professional portfolio where I have all my projects.
-I'll be adding more projects comming soon!
+This page is under construction! ⚠️🔨
+Welcome to my professional portfolio. I’m currently adding projects, and more will be available soon.
 
-If you want to check my portfolio on live, follow this link --> https://eilynvargas.github.io
+In the meantime, you can view my live portfolio here: https://eilynvargas.github.io
+✨Please be kind and avoid copying my design.
