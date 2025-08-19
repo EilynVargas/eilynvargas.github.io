@@ -156,7 +156,7 @@ nav{
 
 .home{
   height: 100vh;
-  background: linear-gradient(90deg, hsla(1, 61%, 72%, 1) 0%, hsla(8, 28%, 57%, 1) 6%, hsla(17, 16%, 47%, 1) 14%, hsla(138, 5%, 43%, 1) 22%, hsla(177, 10%, 42%, 1) 33%, hsla(169, 15%, 41%, 1) 40%, hsla(99, 7%, 48%, 1) 48%, hsla(71, 12%, 45%, 1) 55%, hsla(56, 21%, 41%, 1) 61%, hsla(30, 21%, 46%, 1) 72%, hsla(7, 37%, 49%, 1) 81%, hsla(5, 37%, 55%, 1) 91%, hsla(1, 61%, 72%, 1) 100%);
+  background: linear-gradient(90deg, hsla(1, 61%, 72%, 1) 0%, hsla(8, 28%, 57%, 1) 7%, hsla(17, 16%, 47%, 1) 14%, hsla(138, 5%, 43%, 1) 22%, hsla(177, 10%, 42%, 1) 33%, hsla(169, 12%, 44%, 1) 40%, hsla(99, 7%, 48%, 1) 48%, hsla(71, 12%, 45%, 1) 55%, hsla(56, 21%, 41%, 1) 61%, hsla(30, 21%, 46%, 1) 72%, hsla(7, 37%, 49%, 1) 82%, hsla(5, 37%, 55%, 1) 91%, hsla(1, 61%, 72%, 1) 98%);
   background-size: var(--home-bg-width) 100%;
   animation: gradient 15s linear infinite;
 }
