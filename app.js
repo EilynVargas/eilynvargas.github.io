@@ -2,7 +2,6 @@
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
             const scrollPosition = window.scrollY;
-            
             const svgLogo = document.getElementById('logoText');
           
 
@@ -17,4 +16,11 @@
                 svgLogo.setAttribute('fill','#fff');
                 svgLogo.setAttribute('stroke','#fff');
             }
+
+            //Code for parallax effect to image 
+            const image = document.getElementById('about-photo');
+            const imageScrollPosition = -400 + (scrollPosition * 0.15);
+
+            image.style.transform = "translate3d(0, "+imageScrollPosition+"px, 0) ";
+           
         });
