@@ -201,14 +201,23 @@ section:not(:first-child){
  margin: 40px 40px 100px 40px;
 }
 
-.about{
+.about-section{
   align-items: center;
+}
+
+.parallax-container{
+  z-index: -1;
 }
 
 .about-photo{
   width: 700px;
-  height: 1000px;
+  height: 1300px;
   object-fit: cover;
+}
+
+.parallax-inner{
+  overflow: hidden;
+  height:1000px;
 }
 
 .container p{
