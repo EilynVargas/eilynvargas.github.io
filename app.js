@@ -5,8 +5,8 @@
             const svgLogo = document.getElementById('logoText');
           
 
-            // Add 'scrolled' class when user scrolls down 50px
-            if (scrollPosition > 50) {
+            // Add 'scrolled' class when user scrolls down 350px
+            if (scrollPosition > 350) {
                 header.classList.add('scrolled');
                 svgLogo.setAttribute('fill','#000');
                 svgLogo.setAttribute('stroke','#000');
