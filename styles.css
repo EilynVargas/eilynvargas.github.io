@@ -4,6 +4,9 @@
   --color-primary-black: #000000;
   --color-secondary-gray-01: #6c6c6c;
   --color-secondary-gray-02: #c5c5c5;
+  --color-secondary-beige-01: #f9f7ee;
+  --color-secondary-beige-02: #f3f1e8;
+
 }
 
 *{
@@ -99,7 +102,7 @@ span{
 }
 
 .header-wrapper.scrolled {
-  background-color: var(--color-primary-white);
+  background-color: var(--color-secondary-beige-01);
   transition: all .3s ease-in-out;
   z-index: 1000;
   stroke: var(--color-primary-black);
@@ -198,7 +201,9 @@ h1 > svg{
 }
 
 section:not(:first-child){
- margin: 40px 40px 100px 40px;
+ padding: 40px 40px 100px 40px;
+ background-color: var(--color-secondary-beige-01);
+ z-index: -1;
 }
 
 .about-section{
@@ -206,7 +211,7 @@ section:not(:first-child){
 }
 
 .parallax-container{
-  z-index: -1;
+  z-index: 1;
 }
 
 .about-photo{
@@ -251,6 +256,7 @@ section:not(:first-child){
 .card{
   width: 100%;
   height: 60vh;
+  background-color: var(--color-secondary-beige-02);
 }
 
 .card-img{
@@ -263,7 +269,7 @@ section:not(:first-child){
 .project-img{
   object-fit: cover;
   max-width: 80%;
-  transition: all .5s ease-out;
+  transition: all .3s ease-out;
   box-shadow: 0px 10px 30px #d7d6d6;
   margin: 0 50px;
 }
