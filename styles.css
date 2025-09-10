@@ -81,8 +81,32 @@ a{
   border-radius: 5px;
 }
 
-span{
+.fw-600{
   font-weight: 600;
+}
+
+.loader{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-secondary-beige-02);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: fixed;
+  z-index: 2;
+}
+
+.test{
+  height: 100px;
+  overflow: hidden;
+}
+
+.logo{
+  position: relative;
+  top: 60%;
+  transform: translate(0, -10vh);
+  transition: all 2s ease-in-out;
 }
 
 .header-wrapper{
@@ -395,7 +419,7 @@ footer::after{
   }
   100%{
     stroke-dashoffset: 0;
-    fill: white;
+    fill: var(--color-primary-white);
   }
 }
 
