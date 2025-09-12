@@ -149,7 +149,7 @@ svg #hero-text{
   stroke-width: 1;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: fillSvg 4s ease-in-out 8s forwards;
+  animation: fillSvg 4s ease-in-out 5s forwards;
 }
 
 .links a{
