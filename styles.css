@@ -95,9 +95,10 @@ a{
   overflow: hidden;
   position: fixed;
   z-index: 2;
+  transition: all 2s ease-in-out;
 }
 
-.test{
+.loader-container{
   height: 100px;
   overflow: hidden;
 }
@@ -105,8 +106,11 @@ a{
 .logo{
   position: relative;
   top: 60%;
+}
+
+.logo-loaded{
   transform: translate(0, -10vh);
-  transition: all 2s ease-in-out;
+  transition: all 2s;
 }
 
 .header-wrapper{
@@ -145,7 +149,7 @@ svg #hero-text{
   stroke-width: 1;
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: fillSvg 4s ease-in-out 1 forwards;
+  animation: fillSvg 4s ease-in-out 5s forwards;
 }
 
 .links a{
