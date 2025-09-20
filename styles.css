@@ -6,7 +6,6 @@
   --color-secondary-gray-02: #c5c5c5;
   --color-secondary-beige-01: #f9f7ee;
   --color-secondary-beige-02: #f3f1e8;
-
 }
 
 *{
@@ -31,12 +30,12 @@ h1, h2, h3, h4{
 
 h1{
   color: var(--color-primary-white);
-  font-size: clamp(2rem, 4vw, 10rem);
+  font-size: clamp(3rem, 4vw, 10rem);
   text-align: center;
 }
 
 h2, .--header-2{
-  font-size: clamp(2rem, 4vw, 8rem);
+  font-size: clamp(2.5rem, 4vw, 8rem);
   margin-bottom: 20px;
 }
 
@@ -50,6 +49,10 @@ h2, .--header-2{
 
 p, a{
   font-family: 'General sans', sans-serif;
+}
+
+p{
+  font-size: clamp(0.75rem, 1vw, 1rem);
 }
 
 a{
@@ -188,6 +191,10 @@ nav{
   color: var(--color-primary-white);
 }
 
+.menu-icon-mb{
+  display: none;
+}
+
 h1 > svg{
   position: relative;
   top: 15px;
@@ -219,7 +226,7 @@ h1 > svg{
 }
 
 .line{
-  width: 400px;
+  width: 25rem;
   height: 1px;
   background-color: var(--color-primary-white);
 }
@@ -362,11 +369,10 @@ footer::after{
 
 .header-logo, .footer-title{
   font-family: 'Pencerio', cursive;
-
 }
 
 .footer-profiles{
-  grid-template-columns: repeat(3, minmax(0, 20px));
+  grid-template-columns: repeat(2, minmax(0, 20px));
 }
 
 .footer-mail, .footer-description{
@@ -377,9 +383,102 @@ footer::after{
   padding: 20px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+/* Mobile layout */
+@media (max-width: 600px) {
+  .header-wrapper{
+    width: 100%;
+    padding: 15px 20px;
+  }
 
+  .header-logo{
+    padding: 0;
+  }
 
+  .header-logo > svg{
+    width: 60px;
+    height: 30px;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .menu-icon-mb{
+    display: unset;
+  }
+
+  .home{
+    width: 100%;
+  }
+
+  .welcome-section{
+    width: 70%;
+  }
+
+  .line{
+    width: 100%;
+  }
+
+  .greeting{
+    padding: 5px 0;
+  }
+  
+  .hero-subtitle{
+    padding-top: 5px;
+  }
+
+  .name-title{
+    width: 7rem;
+    height: 3.5rem;
+  }
+
+  section:not(:first-child){
+    padding: 40px 20px;
+  }
+
+  .section-title{
+    text-align: center;
+  }
+
+  .about-section{
+    flex-direction: column-reverse;
+  }
+
+  .about-description{
+    padding: unset;
+    text-align: center;
+ }
+ 
+ .resume-link{
+    justify-content: center;
+  }
+
+  .resume-link > svg{
+    width: 18px;
+    height: 18px;
+  }
+
+  .parallax-inner{
+    height: 400px
+  }
+
+  .about-photo{
+    width:350px;
+    height: 900px;
+    object-fit: cover;
+  }
+
+  .projects, .footer-info{
+    grid-template-columns: repeat(1, minmax(0,1fr));
+  }
+
+  .footer-profiles{
+    justify-content: center;
+  }
+
+  .footer-description{
+    padding: 10px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
