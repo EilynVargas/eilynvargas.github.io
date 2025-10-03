@@ -191,7 +191,7 @@ nav{
   color: var(--color-primary-white);
 }
 
-.menu-icon-mb{
+.nav-toggle{
   display: none;
 }
 
@@ -399,12 +399,14 @@ footer::after{
     height: 30px;
   }
 
-  .navbar{
-    display: none;
+  .links{
+    flex-direction: column;
   }
 
-  .menu-icon-mb{
+  .nav-toggle{
     display: unset;
+    background: none;
+    border: none;
   }
 
   .home{
