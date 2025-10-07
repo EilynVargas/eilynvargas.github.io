@@ -306,7 +306,7 @@ section:not(:first-child){
   height: 1300px;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: -2;
+  z-index: 0;
 }
 
 .parallax-inner{
