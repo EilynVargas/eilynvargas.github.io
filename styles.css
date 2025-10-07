@@ -256,8 +256,7 @@ h1 > svg{
   content: "";
   position: absolute;
   width: 100%; 
-
-  min-height: 100vh; /*CHECK THISSSSSS*/
+  height: 100%;
   background-image: url(https://arc.net/noise-light.png);
   mix-blend-mode: screen;
   pointer-events: none; 
@@ -304,6 +303,7 @@ section:not(:first-child){
   height: 1300px;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 2;
 }
 
 .parallax-inner{
