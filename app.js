@@ -67,8 +67,8 @@ window.addEventListener('scroll', function() {
         menuIcon.setAttribute('stroke','#fff');
     }
 
-    // //Code for parallax effect to image 
-    // const image = document.getElementById('about-photo');
-    // const imageScrollPosition = -400 + (scrollPosition * 0.15);
-    // image.style.transform = "translate3d(0, "+imageScrollPosition+"px, 0) ";
+    //Code for parallax effect to image 
+    const image = document.getElementById('about-photo');
+    const imageScrollPosition = -400 + (scrollPosition * 0.15);
+    image.style.transform = "translate3d(0, "+imageScrollPosition+"px, 0) ";
 });
