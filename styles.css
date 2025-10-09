@@ -443,12 +443,9 @@ footer::after{
 
 .footer-info > svg{ margin: 0 auto; }
 
-.header-logo, .footer-title{
-  font-family: 'Pencerio', cursive;
-}
-
 .profiles{
   grid-template-columns: repeat(2, minmax(0, 20px));
+  justify-content: center;
 }
 
 .footer-mail, .footer-description{
@@ -472,7 +469,7 @@ footer::after{
     z-index: 1;
   }
 
-  .header-logo{
+  .header-logo, .footer-logo{
     padding: 0;
   }
 
@@ -620,12 +617,6 @@ footer::after{
 
   .projects, .footer-info{
     grid-template-columns: repeat(1, minmax(0,1fr));
-  }
-
-  .footer-profiles{
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 
   .footer-description{
