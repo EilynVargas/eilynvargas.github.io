@@ -30,6 +30,28 @@ function startCounter(){
     }, CONFIG.COUNTER_DELAY);
 }
 
+//Code for mobile navigation menu
+    const toggle = document.querySelector('.nav-toggle');
+    const flyout = document.querySelector('.navbar');
+    const navLink = document.querySelectorAll('.nav-link');
+    const closeButton = document.querySelector('.close-btn');
+    console.log(flyout)
+
+    toggle.addEventListener('click', () => {
+        flyout.classList.toggle('active');
+    });
+
+    closeButton.addEventListener('click', () => {
+        flyout.classList.toggle('active');
+    })
+
+    navLink.forEach(link => {
+        link.addEventListener('click', () => {
+        flyout.classList.toggle('active');
+    });
+});
+
+
 // Function that adds a class to the HTML element, where shows a translation of the logo when loader starts
 function preloadLogo(){
     const preloadElement = document.getElementById('preload-logo');

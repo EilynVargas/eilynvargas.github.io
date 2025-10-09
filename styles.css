@@ -108,7 +108,7 @@ a{
           flex-direction: column;
   overflow: hidden;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   -webkit-transition: all 2s ease-in-out;
   -o-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
@@ -160,7 +160,7 @@ a{
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  z-index: 1000;
+  z-index: 2;
   stroke: var(--color-primary-black);
   fill: var(--color-primary-black);
   border-bottom: 1px solid var(--color-secondary-gray-02);
@@ -233,7 +233,7 @@ nav{
   color: var(--color-primary-white);
 }
 
-.nav-toggle{
+.nav-toggle, .header-flyout-menu, .header-menu-social-accounts{
   display: none;
 }
 
@@ -308,7 +308,7 @@ section:not(:first-child){
 
 .parallax-inner{
   overflow: hidden;
-  height:1000px;
+  height: 1000px;
 }
 
 .container p{
@@ -444,7 +444,7 @@ footer::after{
   font-family: 'Pencerio', cursive;
 }
 
-.footer-profiles{
+.profiles{
   grid-template-columns: repeat(2, minmax(0, 20px));
 }
 
@@ -458,9 +458,15 @@ footer::after{
 
 /* Mobile layout */
 @media (max-width: 600px) {
+
+  .p-20{
+    padding: 20px;
+  }
+
   .header-wrapper{
     width: 100%;
     padding: 15px 20px;
+    z-index: 1;
   }
 
   .header-logo{
@@ -472,17 +478,74 @@ footer::after{
     height: 30px;
   }
 
-  .links{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
   .nav-toggle{
     display: unset;
     background: none;
     border: none;
+  }
+
+  .header-flyout-menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--color-primary-black);
+    z-index: 2;
+  }
+
+  .menu{
+    font-size: 1rem;
+  }
+
+  .close-btn{
+    display: inline-block;
+    background-color: transparent;
+    padding: 5px 15px;
+    color: var(--color-primary-black);
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin: 0 0 0 auto; /* add this line */
+    font-family: 'General sans', sans-serif;
+  }
+
+  .navbar{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background-color: var(--color-secondary-beige-01);
+    transition: all 2s ease;
+  }
+
+  .nav-items{
+    width: 40vw;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .nav-link{
+    padding: 10px 0;
+    font-family: 'Boska', serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: var(--color-primary-black);
+  }
+
+  .header-menu-social-accounts{
+    border-top: 1px solid var(--color-secondary-gray-02);
+    padding: 10px 0 0 10px;
+  }
+
+  .navbar.active{
+    right: 0;
   }
 
   .home{
@@ -568,7 +631,6 @@ footer::after{
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-
 
 }
 
