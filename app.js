@@ -35,7 +35,6 @@ function startCounter(){
     const flyout = document.querySelector('.navbar');
     const navLink = document.querySelectorAll('.nav-link');
     const closeButton = document.querySelector('.close-btn');
-    console.log(flyout)
 
     toggle.addEventListener('click', () => {
         flyout.classList.toggle('active');
@@ -47,7 +46,11 @@ function startCounter(){
 
     navLink.forEach(link => {
         link.addEventListener('click', () => {
-        flyout.classList.toggle('active');
+        
+        setTimeout(() => {
+                    flyout.classList.toggle('active');
+        }, CONFIG.TRANSITION_DELAY)
+
     });
 });
 
