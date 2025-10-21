@@ -31,29 +31,39 @@ function startCounter(){
 }
 
 //Code for mobile navigation menu
+    const body = document.querySelector('body');
     const toggle = document.querySelector('.nav-toggle');
     const flyout = document.querySelector('.navbar');
     const navLink = document.querySelectorAll('.nav-link');
     const closeButton = document.querySelector('.close-btn');
 
-    toggle.addEventListener('click', () => {
+    function toggleMenu(){
         flyout.classList.toggle('active');
+    }
+
+    function enableScroll(){
+        body.style.overflowY = "visible";
+    }
+
+    toggle.addEventListener('click', () => {
+        toggleMenu();
+        body.style.overflowY = "hidden";
     });
 
     closeButton.addEventListener('click', () => {
-        flyout.classList.toggle('active');
+        toggleMenu();
+        enableScroll();
     })
 
     navLink.forEach(link => {
         link.addEventListener('click', () => {
-        
-        setTimeout(() => {
-                    flyout.classList.toggle('active');
-        }, CONFIG.TRANSITION_DELAY)
+            enableScroll();
+            setTimeout(() => {
+                toggleMenu();
+            }, CONFIG.TRANSITION_DELAY);
 
     });
 });
-
 
 // Function that adds a class to the HTML element, where shows a translation of the logo when loader starts
 function preloadLogo(){
