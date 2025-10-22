@@ -48,6 +48,7 @@ function startCounter(){
     toggle.addEventListener('click', () => {
         toggleMenu();
         body.style.overflowY = "hidden";
+        document.body.style.position = 'fixed';
     });
 
     closeButton.addEventListener('click', () => {
