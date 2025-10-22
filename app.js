@@ -42,13 +42,13 @@ function startCounter(){
     }
 
     function enableScroll(){
-        body.style.overflowY = "visible";
+        document.body.style.touchAction = "auto";
     }
 
     toggle.addEventListener('click', () => {
         toggleMenu();
-        body.style.overflowY = "hidden";
-        document.body.style.position = 'fixed';
+
+        document.body.style.touchAction = 'none';
     });
 
     closeButton.addEventListener('click', () => {
