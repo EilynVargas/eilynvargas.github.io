@@ -5,8 +5,20 @@ const CONFIG = {
     COUNTER_INTERVAL: 30
 }
 
+//Functions to enable/disable scrolling in the site
+function enableScroll(){
+    document.body.style.overflowY = "visible";
+    document.body.style.touchAction = "auto";
+}
+
+function disableScroll(){
+    document.body.style.overflowY = "hidden";
+    document.body.style.touchAction = 'none';
+}
+
 // Counter function that starts after a specified delay and runs at a set interval.
 function startCounter(){
+    disableScroll();
     setTimeout(function timeoutCounter(){
         const counterNumber = document.getElementById('counter');
         const loaderContainer = document.getElementById('loader');
@@ -20,6 +32,7 @@ function startCounter(){
                 // When counter reach 100, the loader disappears from the screen and displays hero-banner
                 setTimeout(function timeoutLoaderContainer(){
                     loaderContainer.style.transform = "translate(0,-100vh)";
+                    enableScroll();
                 }, CONFIG.TRANSITION_DELAY)
             }
             else{
@@ -40,14 +53,9 @@ function startCounter(){
         flyout.classList.toggle('active');
     }
 
-    function enableScroll(){
-        document.body.style.touchAction = "auto";
-    }
-
     toggle.addEventListener('click', () => {
         toggleMenu();
-
-        document.body.style.touchAction = 'none';
+        disableScroll();
     });
 
     closeButton.addEventListener('click', () => {
@@ -62,8 +70,8 @@ function startCounter(){
                 toggleMenu();
             }, CONFIG.TRANSITION_DELAY);
 
+        });
     });
-});
 
 // Function that adds a class to the HTML element, where shows a translation of the logo when loader starts
 function preloadLogo(){
