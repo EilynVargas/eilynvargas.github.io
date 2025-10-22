@@ -31,6 +31,7 @@ function startCounter(){
 }
 
 //Code for mobile navigation menu
+    const body = document.querySelector('body');
     const toggle = document.querySelector('.nav-toggle');
     const flyout = document.querySelector('.navbar');
     const navLink = document.querySelectorAll('.nav-link');
