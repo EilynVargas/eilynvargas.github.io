@@ -31,7 +31,6 @@ function startCounter(){
 }
 
 //Code for mobile navigation menu
-    const body = document.querySelector('body');
     const toggle = document.querySelector('.nav-toggle');
     const flyout = document.querySelector('.navbar');
     const navLink = document.querySelectorAll('.nav-link');
@@ -42,19 +41,22 @@ function startCounter(){
     }
 
     function enableScroll(){
-        body.style.overflowY = "visible";
+        document.body.style.overflowY = "visible";
+    }
+
+    function disableScroll(){
+        document.body.style.overflowY = "hidden";
     }
 
     toggle.addEventListener('click', () => {
         toggleMenu();
-        body.style.overflowY = "hidden";
-        document.body.style.position = 'fixed';
+        disableScroll();
     });
 
     closeButton.addEventListener('click', () => {
         toggleMenu();
         enableScroll();
-    })
+    });
 
     navLink.forEach(link => {
         link.addEventListener('click', () => {
