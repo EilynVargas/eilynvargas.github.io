@@ -240,7 +240,7 @@ nav{
 
 .name-title{
     position: relative;
-    margin-left: 1rem;
+    margin-left: 0.8rem;
     top: 2vh;
     height: 1.2em;
 }
@@ -636,7 +636,7 @@ footer::after{
   }
 
   .name-title{
-    margin-left: 0.8rem;
+    margin-left: 0.6rem;
     top: 1.5vh;
   }
 
