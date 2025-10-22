@@ -240,7 +240,7 @@ nav{
 
 .name-title{
     position: relative;
-    margin-left: 0.8rem;
+    margin-left: 0.6rem;
     top: 2vh;
     height: 1.2em;
 }
@@ -303,7 +303,7 @@ section:not(:first-child){
 }
 
 .parallax-container{
-  width: 50%;
+  width: 40%;
   z-index: 1;
 }
 
@@ -328,8 +328,12 @@ section:not(:first-child){
 
 .about-description{
   width: 50%;
-  padding: 0 100px;
+  padding: 0 60px 0 100px;
   white-space: break-spaces;
+}
+
+.resume-link{
+  align-items: center;
 }
 
 .resume-link a, svg{
@@ -464,6 +468,26 @@ footer::after{
   padding: 20px;
 }
 
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  
+  .header-logo{
+    padding: 15px 40px;
+  }
+  .header-logo > svg{
+    height: 2.5em;
+  }
+
+  .parallax-inner{
+    height: 800px;
+  }
+
+  .about-photo{
+    height: 1100px;
+  }
+}
+
+
 /* Tablet layout */
 @media (max-width: 1024px) {
    .p-20{
@@ -589,11 +613,7 @@ footer::after{
   }
 
   .about-description{
-    padding: 0 50px;
-  }
-
-  .resume-link{
-    align-items: center;
+    padding: 0 0 0 50px;
   }
   
   .projects, .footer-info{
@@ -697,14 +717,6 @@ footer::after{
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
-
-}
-
-@media (min-width: 1025px) and (max-width: 1300px) {
-  
-  .projects{
-    grid-template-columns: repeat(2, minmax(0,1fr));
-  }
 
 }
 
