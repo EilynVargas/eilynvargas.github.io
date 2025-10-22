@@ -184,7 +184,6 @@ svg #hero-text{
 
 .links a{
   position: relative;
-  --underline-color: var(--color-primary-white);
 }
 
 a::after{
@@ -232,6 +231,7 @@ nav{
 
 .nav-link{
   color: var(--color-primary-white);
+  --underline-color: var(--color-primary-white);
 }
 
 .nav-toggle, .header-flyout-menu, .header-menu-social-accounts{
@@ -240,10 +240,14 @@ nav{
 
 .name-title{
     position: relative;
-    top: 15px;
-    width: 7.5rem;
+    margin-left: 1rem;
+    top: 2vh;
     height: 1.2em;
 }
+
+  .hero-subtitle{
+    padding-top: 5px;
+  }
 
 .home{
   height: 100vh;
@@ -299,11 +303,12 @@ section:not(:first-child){
 }
 
 .parallax-container{
+  width: 50%;
   z-index: 1;
 }
 
 .about-photo{
-  width: 700px;
+  max-width: 100%;
   height: 1300px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -312,6 +317,7 @@ section:not(:first-child){
 
 .parallax-inner{
   overflow: hidden;
+  max-width: 700px;
   height: 1000px;
 }
 
@@ -321,6 +327,7 @@ section:not(:first-child){
 }
 
 .about-description{
+  width: 50%;
   padding: 0 100px;
   white-space: break-spaces;
 }
@@ -457,14 +464,13 @@ footer::after{
   padding: 20px;
 }
 
-/* Mobile layout */
-@media (max-width: 600px) {
-
-  .p-20{
+/* Tablet layout */
+@media (max-width: 1024px) {
+   .p-20{
     padding: 20px;
   }
 
-  .header-wrapper{
+   .header-wrapper{
     width: 100%;
     padding: 15px 20px;
     z-index: 1;
@@ -474,15 +480,19 @@ footer::after{
     padding: 0;
   }
 
-  .header-logo > svg{
-    width: 60px;
-    height: 30px;
-  }
-
   .nav-toggle{
     display: unset;
     background: none;
     border: none;
+  }
+
+  .nav-toggle > svg{
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  .header-logo > svg{
+    height: 2.5em;
   }
 
   .header-flyout-menu{
@@ -527,7 +537,7 @@ footer::after{
   }
 
   .nav-items{
-    width: 40vw;
+    width: fit-content;
     height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -543,6 +553,7 @@ footer::after{
     font-weight: 400;
     font-size: 40px;
     color: var(--color-primary-black);
+    --underline-color: var(--color-primary-black);
   }
 
   .header-menu-social-accounts{
@@ -560,6 +571,54 @@ footer::after{
     animation: fadeIn 0.5s ease-in 1s forwards;
   }
 
+  .name-title{
+    top: 1.4vh;
+    height: 1.2em;
+  }
+
+  section:not(:first-child){
+    padding-bottom: 80px;
+  }
+
+  .parallax-inner{
+    height: 500px;
+  }
+
+  .about-photo{
+    height: 800px;
+  }
+
+  .about-description{
+    padding: 0 50px;
+  }
+
+  .resume-link{
+    align-items: center;
+  }
+  
+  .projects, .footer-info{
+    grid-template-columns: repeat(1, minmax(0,1fr));
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+
+  .header-wrapper{
+    width: 100%;
+    padding: 15px 20px;
+    z-index: 1;
+  }
+
+  .header-logo, .footer-logo{
+    padding: 0;
+  }
+
+  .header-logo > svg{
+    width: 60px;
+    height: 30px;
+  }
+
   .home{
     width: 100%;
   }
@@ -575,9 +634,10 @@ footer::after{
   .greeting{
     padding: 5px 0;
   }
-  
-  .hero-subtitle{
-    padding-top: 5px;
+
+  .name-title{
+    margin-left: 0.8rem;
+    top: 1.5vh;
   }
 
   section:not(:first-child){
@@ -595,20 +655,8 @@ footer::after{
             flex-direction: column-reverse;
   }
 
-  .about-description{
-    padding: unset;
-    text-align: center;
- }
- 
- .resume-link{
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .resume-link > svg{
-    width: 18px;
-    height: 18px;
+  .parallax-container{
+    width: 100%;
   }
 
   .parallax-inner{
@@ -616,10 +664,26 @@ footer::after{
   }
 
   .about-photo{
-    width:350px;
     height: 900px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+
+  .about-description{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+ }
+ 
+  .resume-link{
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+  }
+
+  .resume-link > svg{
+    width: 18px;
+    height: 18px;
   }
 
   .projects, .footer-info{
@@ -629,10 +693,6 @@ footer::after{
   .footer-description{
     padding: 10px;
   }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
