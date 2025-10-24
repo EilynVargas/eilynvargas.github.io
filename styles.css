@@ -4,6 +4,7 @@
   --color-primary-black: #000000;
   --color-secondary-gray-01: #6c6c6c;
   --color-secondary-gray-02: #c5c5c5;
+  --color-secondary-gray-03: #d7d6d6;
   --color-secondary-beige-01: #f9f7ee;
   --color-secondary-beige-02: #f3f1e8;
 }
@@ -126,7 +127,6 @@ a{
   align-items: center;
   background-color: transparent;
   transition: all .3s ease-in-out;
-  /* z-index: 1; */
 }
 
 .header-logo{
@@ -292,7 +292,7 @@ section:not(:first-child){
 .resume-link a, svg{
   color: var(--color-secondary-gray-01);
   --underline-color: var(--color-primary-black);
-  transition: transform 0.2s ease
+  transition: transform 0.2s ease;
 }
 
 .resume-link a:hover{
@@ -325,13 +325,13 @@ section:not(:first-child){
      object-fit: cover;
   max-width: 80%;
   transition: all .3s ease-out;
-  box-shadow: 0px 10px 30px #d7d6d6;
+  box-shadow: 0px 10px 30px var(--color-secondary-gray-03);
   margin: 0 50px;
 }
 
 .project-img:hover{
   translate: 0 -8%;
-  box-shadow: 0px 30px 30px #d7d6d6;
+  box-shadow: 0px 30px 30px var(--color-secondary-gray-03);
 }
 
 .card-info{
@@ -419,8 +419,19 @@ footer::after{
   }
 }
 
-
 /* Tablet layout */
+@media (min-width: 601px) and (max-width: 1024px) {
+  
+  .card{
+    height: 100%;
+  }
+
+  .project-img{
+    margin: 50px;
+  }
+}
+
+/* Shared layout (mobile-tablet) */
 @media (max-width: 1024px) {
    .p-20{
     padding: 20px;
@@ -469,10 +480,10 @@ footer::after{
     padding: 5px 15px;
     color: var(--color-primary-black);
     text-align: center;
-    border: 1px solid #000000;
+    border: 1px solid var(--color-primary-black);
     border-radius: 50px;
     font-size: 1rem;
-    margin: 0 0 0 auto; /* add this line */
+    margin: 0 0 0 auto;
     font-family: 'General sans', sans-serif;
   }
 
@@ -556,16 +567,6 @@ footer::after{
 /* Mobile layout */
 @media (max-width: 600px) {
 
-  .header-wrapper{
-    width: 100%;
-    padding: 15px 20px;
-    z-index: 1;
-  }
-
-  .header-logo, .footer-logo{
-    padding: 0;
-  }
-
   .header-logo > svg{
     width: 60px;
     height: 30px;
@@ -614,8 +615,6 @@ footer::after{
 
   .about-photo{
     height: 900px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 
   .about-description{
@@ -631,10 +630,6 @@ footer::after{
   .resume-link > svg{
     width: 18px;
     height: 18px;
-  }
-
-  .projects, .footer-info{
-    grid-template-columns: repeat(1, minmax(0,1fr));
   }
 
   .footer-description{
