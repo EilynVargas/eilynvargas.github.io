@@ -31,7 +31,7 @@ h1, h2, h3, h4{
 
 h1{
   color: var(--color-primary-white);
-  font-size: clamp(3rem, 4vw, 10rem);
+  font-size: clamp(2.8rem, 4vw, 10rem);
   text-align: center;
 }
 
@@ -200,7 +200,7 @@ nav{
 .name-title{
     position: relative;
     margin-left: 0.6rem;
-    top: 2vh;
+    top: 1.2rem;
     height: 1.2em;
 }
 
@@ -539,8 +539,8 @@ footer::after{
   }
 
   .name-title{
-    top: 1.4vh;
-    height: 1.2em;
+    top: 0.9rem;
+    height: 1.1em;
   }
 
   section:not(:first-child){
@@ -590,7 +590,7 @@ footer::after{
 
   .name-title{
     margin-left: 0.6rem;
-    top: 1.5vh;
+    top: 0.8rem;
   }
 
   section:not(:first-child){
