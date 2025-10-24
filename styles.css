@@ -103,7 +103,7 @@ a{
 }
 
 .loader-container{
-  height: 100px;
+  height: 15vh;
   overflow: hidden;
 }
 
@@ -113,7 +113,7 @@ a{
 }
 
 .logo-loaded{
-  transform: translate(0, -10vh);
+  transform: translate(0, -5rem);
   transition: all 2s;
 }
 
