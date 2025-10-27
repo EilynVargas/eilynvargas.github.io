@@ -1,5 +1,4 @@
 # Portfolio
-This page is under construction! ⚠️🔨
 Welcome to my professional portfolio. Here I share all the projects that I've built.
 
 In the meantime, you can view my live portfolio here: https://eilynvargas.github.io
